@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio - Data Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 10%;
+            background-color: #f4f4f9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #003d82;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenido a mi Portafolio</h1>
+    <p>Explorando datos espaciales con Machine Learning.</p>
+    
+    <button id="btnAnalisis">Clasificar Exoplaneta (Misión Kepler)</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        // 1. Seleccionamos los elementos del HTML
+        const boton = document.getElementById('btnAnalisis');
+        const textoResultado = document.getElementById('resultado');
+
+        // 2. Le decimos al botón qué hacer cuando le hagan "click"
+        boton.addEventListener('click', function() {
+            // Este bloque se ejecuta solo cuando presionas el botón
+            textoResultado.innerText = "Procesando datos con Random Forest... ¡Candidato a exoplaneta confirmado!";
+            textoResultado.style.color = "#28a745"; // Cambia el color a verde
+        });
+    </script>
+
+</body>
+</html>
