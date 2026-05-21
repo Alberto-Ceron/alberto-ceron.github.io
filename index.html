@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Jesús Alberto Cerón Hernández — Data Scientist & ML Specialist, UNAM"/>
-  <meta name="keywords" content="Cerón,ceronbuu,UNAM,Data Science,Machine Learning,Física,XGBoost,Python"/>
-  <title>Jesús Alberto Cerón Hernández</title>
+  <meta name="description" content="Jesús Alberto Cerón Hernández — Data Scientist & Machine Learning Specialist, Físico"/>
+  <title>Jesús Alberto Cerón Hernández - Portafolio</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,19 +15,19 @@
        PALETA INSTITUCIONAL / ACADÉMICA
     ═══════════════════════════════════════ */
     :root {
-      --navy:   #002b5e; /* Azul profundo académico */
+      --navy:   #002b5e; /* Azul profundo */
       --blue:   #003d82; /* Azul secundario */
       --mid:    #0055a4; /* Azul de acento */
-      --sky:    #4d94ff; /* Azul claro (Detalles) */
-      --pale:   #eef2f7; /* Fondo de etiquetas y barras */
-      --white:  #ffffff; /* Blanco puro */
-      --off:    #f8f9fa; /* Gris muy claro (Fondo de la página) */
+      --sky:    #4d94ff; /* Azul claro */
+      --pale:   #eef2f7; /* Fondo de etiquetas */
+      --white:  #ffffff; 
+      --off:    #f8f9fa; /* Gris muy claro fondo */
       --text:   #2b3035; /* Texto principal */
       --muted:  #5c636a; /* Texto secundario */
       --line:   #dee2e6; /* Líneas divisorias */
-      --border: #ced4da; /* Bordes generales */
+      --border: #ced4da; /* Bordes */
       --max:    850px;
-      --r:      4px; /* Bordes casi rectos para mayor formalidad */
+      --r:      4px; 
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -88,12 +87,13 @@
     }
 
     .hero-name {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 600;
       line-height: 1.15;
       color: var(--white);
       margin-bottom: 12px;
       letter-spacing: -0.5px;
+      text-transform: uppercase;
     }
 
     .hero-role {
@@ -102,8 +102,8 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #b3d4ff;
-      margin-bottom: 16px;
-      font-weight: 500;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .hero-bio {
@@ -111,7 +111,7 @@
       color: var(--white);
       max-width: 600px;
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.6;
       margin-bottom: 24px;
       opacity: 0.9;
     }
@@ -134,10 +134,7 @@
       border-bottom: 1px solid var(--white);
     }
     
-    .hero-link svg {
-      width: 16px; height: 16px;
-      opacity: 0.8;
-    }
+    .hero-link svg { width: 16px; height: 16px; opacity: 0.8; }
 
     /* ═══════════════════════════════════════
        NAV (sticky under hero)
@@ -161,6 +158,8 @@
       font-weight: 500;
       color: var(--muted);
       border-bottom: 2px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     .topnav a:hover {
       color: var(--navy);
@@ -191,56 +190,20 @@
       color: var(--navy);
       display: flex; align-items: center; justify-content: center;
     }
-    
-    .sec-icon svg {
-      width: 24px; height: 24px;
-      stroke-width: 1.5;
-    }
+    .sec-icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
 
     .sec-title {
       font-size: 1.6rem;
       font-weight: 600;
       color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     hr {
       border: none;
       border-top: 1px solid var(--line);
       margin: 50px 0 0;
-    }
-
-    /* ═══════════════════════════════════════
-       AWARD BANNER
-    ═══════════════════════════════════════ */
-    .award {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--mid);
-      border-radius: var(--r);
-      padding: 24px 30px;
-      display: flex; gap: 20px; align-items: flex-start;
-      margin-bottom: 0;
-    }
-    .award-medal { 
-      color: var(--mid);
-      margin-top: 2px;
-    }
-    .award-medal svg { width: 32px; height: 32px; stroke-width: 1.5; }
-    
-    .award-body { position: relative; z-index: 1; }
-    .award-title {
-      font-size: 1.15rem;
-      color: var(--navy);
-      margin-bottom: 8px;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-    .award-title em { color: var(--mid); font-style: normal; }
-    .award-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 16px;
     }
 
     /* ═══════════════════════════════════════
@@ -275,10 +238,9 @@
       margin-bottom: 16px;
       text-align: justify;
     }
-    .bio-text strong { color: var(--navy); font-weight: 600; }
 
     /* ═══════════════════════════════════════
-       PROJECT CARDS
+       PROJECT CARDS & BULLETS
     ═══════════════════════════════════════ */
     .proj-card {
       border: 1px solid var(--line);
@@ -321,7 +283,7 @@
     }
 
     .proj-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: var(--navy);
       margin-bottom: 6px;
@@ -332,19 +294,22 @@
       font-size: 0.9rem;
       color: var(--mid);
       font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    .proj-desc {
+    .proj-desc-list {
       font-size: 0.95rem;
       color: var(--text);
       line-height: 1.65;
       margin-bottom: 16px;
+      padding-left: 20px;
       text-align: justify;
     }
+    
+    .proj-desc-list li { margin-bottom: 8px; }
 
     /* ═══════════════════════════════════════
-       TIMELINE
+       TIMELINE (Educación)
     ═══════════════════════════════════════ */
     .timeline { position: relative; padding-left: 28px; }
     .timeline::before {
@@ -389,6 +354,13 @@
       color: var(--text);
       line-height: 1.6;
     }
+    
+    .tl-list {
+      margin-top: 8px;
+      padding-left: 20px;
+      font-size: 0.95rem;
+    }
+    .tl-list li { margin-bottom: 4px; }
 
     /* ═══════════════════════════════════════
        SKILLS & CERTS
@@ -463,14 +435,13 @@
     ═══════════════════════════════════════ */
     @media (max-width: 620px) {
       .hero-inner { flex-direction: column; text-align: center; padding: 40px 0 30px; gap: 20px; }
-      .hero-name { font-size: 2rem; }
+      .hero-name { font-size: 1.8rem; }
       .hero-links { justify-content: center; margin-top: 10px; }
       .hero-link { margin-right: 5px; }
       .proj-card-inner { grid-template-columns: 1fr; }
-      .proj-thumb { min-height: 80px; border-right: none; border-bottom: 1px solid var(--line); }
+      .proj-thumb { min-height: 60px; border-right: none; border-bottom: 1px solid var(--line); }
       .topnav { overflow-x: auto; white-space: nowrap; }
       .topnav a { padding: 14px 16px; font-size: 0.8rem; }
-      .award { flex-direction: column; align-items: flex-start; padding: 20px; }
     }
   </style>
 </head>
@@ -482,25 +453,27 @@
     <div class="hero-photo">Fotografía<br>Formal</div>
 
     <div class="hero-text">
-      <h1 class="hero-name">Jesús Alberto Cerón Hernández</h1>
-      <div class="hero-role">Data Scientist · ML Specialist · Físico · UNAM</div>
-      <p class="hero-bio">Desarrollo de modelos predictivos aplicados a datos astronómicos, financieros y médicos. Ganador del 1er. Data Challenge Minsait México 2026.</p>
+      <h1 class="hero-name">Jesús Alberto<br>Cerón Hernández</h1>
+      <div class="hero-role">Data Scientist & Machine Learning Specialist | Físico</div>
+      
+      <p class="hero-bio">Especialista en el desarrollo de arquitecturas de Machine Learning y modelos predictivos para extraer valor de datos complejos. Primer lugar en el Data Challenge Minsait México 2026.</p>
+
       <div class="hero-links">
+        <a class="hero-link" href="tel:5517764221">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          5517764221
+        </a>
         <a class="hero-link" href="mailto:jesusceron818@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           jesusceron818@gmail.com
         </a>
         <a class="hero-link" href="https://www.linkedin.com/in/albertoceron" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          LinkedIn
+          linkedin.com/in/albertoceron
         </a>
         <a class="hero-link" href="https://github.com/Alberto-Ceron" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          GitHub
-        </a>
-        <a class="hero-link" href="tel:5517764221">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          5517764221
+          github.com/alberto-ceron
         </a>
       </div>
     </div>
@@ -510,9 +483,8 @@
 
 <nav class="topnav">
   <div class="topnav-inner">
-    <a href="#semblanza">Semblanza</a>
-    <a href="#proyectos">Proyectos de Investigación</a>
-    <a href="#trayectoria">Trayectoria</a>
+    <a href="#semblanza">Acerca de Mí</a>
+    <a href="#proyectos">Experiencia / Proyectos</a>
     <a href="#educacion">Educación</a>
     <a href="#habilidades">Habilidades</a>
   </div>
@@ -525,39 +497,15 @@
       <div class="sec-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </div>
-      <h2 class="sec-title">Semblanza Profesional</h2>
+      <h2 class="sec-title">Acerca de mí</h2>
     </div>
 
     <p class="bio-text">
-      Estudiante de Física con créditos concluidos, próximo a titularme en la
-      <strong>Facultad de Ciencias de la UNAM</strong>. Me especializo en Ciencia de Datos y Machine Learning,
-      con formación sólida en matemáticas avanzadas y programación en Python. He desarrollado modelos
-      predictivos aplicados a datos astronómicos, financieros y médicos, integrando técnicas de
-      Explainable AI (SHAP) para garantizar transparencia regulatoria.
+      Físico por la Universidad Nacional Autónoma de México (UNAM) especializado en Ciencia de Datos y Machine Learning. Mi perfil combina una sólida formación analítica en matemáticas avanzadas e inferencia estadística con el dominio técnico de lenguajes de programación como Python, R y SQL para la resolución de problemas de alto impacto.
     </p>
     <p class="bio-text">
-      <strong>Becario Bécalos de Excelencia Académica</strong> con promedio destacado. Autodidacta
-      en Econometría, AWS Cloud y JavaScript para despliegue de herramientas analíticas en la web.
+      Cuento con experiencia comprobable en el diseño y despliegue de modelos predictivos, análisis de series de tiempo y modelado econométrico. Adicionalmente, poseo conocimientos en diseño de arquitecturas en la nube (AWS) y desarrollo web (JavaScript) para la implementación de soluciones analíticas integrales. Reconocido como Becario Bécalos de Excelencia Académica por desempeño académico destacado.
     </p>
-
-    <div style="margin-top:30px">
-      <div class="award">
-        <div class="award-medal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        </div>
-        <div class="award-body">
-          <div class="award-title"><em>1.er lugar</em> — Reto Data Science · Data Challenge Minsait México 2026</div>
-          <div class="award-desc">Liderazgo en el desarrollo de la solución analítica para un caso de negocio en telecomunicaciones. Implementación de arquitectura multi-modelo: Regresión Logística (baseline), XGBoost y LightGBM, con optimización métrica orientada a Recall y ROC-AUC. Defensa técnica de resultados ante panel de expertos.</div>
-          <div class="award-chips">
-            <span class="chip">XGBoost</span>
-            <span class="chip">LightGBM</span>
-            <span class="chip">ROC-AUC</span>
-            <span class="chip">Recall</span>
-            <span class="chip">Telecomunicaciones</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <section class="section" id="proyectos">
@@ -565,29 +513,21 @@
       <div class="sec-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
       </div>
-      <h2 class="sec-title">Proyectos de Investigación y Desarrollo</h2>
+      <h2 class="sec-title">Experiencia y Proyectos Destacados</h2>
     </div>
 
     <div class="proj-card">
       <div class="proj-card-inner">
         <div class="proj-thumb">01</div>
         <div class="proj-body">
-          <div class="proj-year">2025 · Servicio Social, UNAM</div>
-          <h3 class="proj-title">Clasificación de Exoplanetas con Machine Learning</h3>
-          <div class="proj-inst">Facultad de Ciencias, UNAM · Misión Kepler, NASA</div>
-          <p class="proj-desc">
-            Implementación de algoritmos supervisados (Árboles de Decisión, Random Forest, Redes Neuronales,
-            XGBoost, LightGBM) para la identificación y clasificación de exoplanetas utilizando registros de la misión Kepler de la NASA.
-            Procesamiento de señales, limpieza de datos y validación estadística de grandes volúmenes de información astronómica.
-            <strong style="color:var(--navy)">Trabajo presentado en formato póster en el Congreso Nacional de Física.</strong>
-          </p>
-          <div class="proj-tags">
-            <span class="ptag">Astrofísica Computacional</span>
-            <span class="ptag">NASA Kepler</span>
-            <span class="ptag">Scikit-Learn</span>
-            <span class="ptag">XGBoost</span>
-            <span class="ptag">Random Forest</span>
-          </div>
+          <div class="proj-year">2026</div>
+          <h3 class="proj-title">Victoria en el Reto Data Science — 1er. Data Challenge Minsait México</h3>
+          <div class="proj-inst">Minsait México</div>
+          <ul class="proj-desc-list">
+            <li>Lideré el desarrollo de la solución técnica ganadora en la resolución de un caso de negocio real para el sector de telecomunicaciones.</li>
+            <li>Implementé una arquitectura de modelos que incluyó un baseline de Regresión Logística y algoritmos avanzados como XGBoost y LightGBM.</li>
+            <li>Optimicé el modelo mediante el ajuste de métricas de Recall y ROC-AUC, traduciendo los resultados en recomendaciones estratégicas presentadas ante un panel de expertos.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -596,22 +536,15 @@
       <div class="proj-card-inner">
         <div class="proj-thumb">02</div>
         <div class="proj-body">
-          <div class="proj-year">2026 · Desarrollo Open Source</div>
-          <h3 class="proj-title">RiskEnsemble — Framework de ML para Riesgo Crediticio</h3>
-          <div class="proj-inst">Proyecto personal · Documentación en GitHub</div>
-          <p class="proj-desc">
-            Desarrollo de librería modular en Python para la predicción prescriptiva de impago financiero y detección
-            de anomalías en carteras de crédito. Construcción de modelos de ensamble con técnicas de balanceo de
-            clases. Integración metodológica de <strong style="color:var(--navy)">Explainable AI (XAI) mediante valores SHAP</strong>
-            para garantizar interpretabilidad y cumplimiento normativo. Incluye interfaz de simulación de escenarios (What-if) vía Streamlit.
-          </p>
-          <div class="proj-tags">
-            <span class="ptag">Tecnología Financiera (Fintech)</span>
-            <span class="ptag">Python</span>
-            <span class="ptag">SHAP / XAI</span>
-            <span class="ptag">Streamlit</span>
-            <span class="ptag">Econometría</span>
-          </div>
+          <div class="proj-year">2025</div>
+          <h3 class="proj-title">Investigación en Machine Learning — Astrofísica Computacional</h3>
+          <div class="proj-inst">Facultad de Ciencias, UNAM</div>
+          <ul class="proj-desc-list">
+            <li>Clasificación de exoplanetas utilizando bases de datos oficiales de la misión Kepler (NASA).</li>
+            <li>Implementación de algoritmos supervisados (Árboles de Decisión, Random Forest, Redes Neuronales, XGBoost y LightGBM).</li>
+            <li>Ejecución de procesos de limpieza, preprocesamiento y validación estadística sobre grandes volúmenes de datos espaciales.</li>
+            <li>Resultados de investigación presentados formalmente en el Congreso Nacional de Física.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -620,55 +553,34 @@
       <div class="proj-card-inner">
         <div class="proj-thumb">03</div>
         <div class="proj-body">
-          <div class="proj-year">2026 · Extracción de Datos (API)</div>
-          <h3 class="proj-title">Modelado Financiero No Lineal y Series de Tiempo</h3>
-          <div class="proj-inst">Proyecto personal</div>
-          <p class="proj-desc">
-            Entrenamiento de un modelo de regresión fundamentado en Random Forest utilizando un histórico de cinco años de datos bursátiles (Yahoo Finance) para la extracción de patrones en series temporales. Creación de un panel de visualización en Tableau para la evaluación de los
-            límites de extrapolación del algoritmo frente al comportamiento real del mercado.
-          </p>
-          <div class="proj-tags">
-            <span class="ptag">Análisis de Series de Tiempo</span>
-            <span class="ptag">Yahoo Finance API</span>
-            <span class="ptag">Tableau</span>
-            <span class="ptag">Random Forest</span>
-          </div>
+          <div class="proj-year">2026</div>
+          <h3 class="proj-title">RiskEnsemble: Framework de Machine Learning para Riesgo Crediticio</h3>
+          <div class="proj-inst">Proyecto Open Source</div>
+          <ul class="proj-desc-list">
+            <li>Desarrollé una librería modular en Python orientada a la predicción prescriptiva de default financiero y detección de anomalías en carteras de crédito.</li>
+            <li>Implementé modelos de ensamble (Random Forest) optimizados mediante balanceo de clases y métricas de precisión técnica para la mitigación del riesgo de pérdida de capital.</li>
+            <li>Integré Explainable AI (XAI) utilizando valores SHAP, permitiendo la interpretabilidad matemática de las decisiones del algoritmo para garantizar la transparencia regulatoria.</li>
+            <li>Desplegué una interfaz interactiva en Streamlit con capacidades de simulación de escenarios (What-if) y procesamiento por lotes (Batch Processing) mediante archivos CSV.</li>
+          </ul>
         </div>
       </div>
     </div>
 
-  </section>
-
-  <section class="section" id="trayectoria">
-    <div class="sec-header">
-      <div class="sec-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      </div>
-      <h2 class="sec-title">Trayectoria Profesional y Académica</h2>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-period">2026</div>
-        <div class="tl-title">Primer Lugar — Data Challenge Minsait México (Data Science)</div>
-        <div class="tl-sub">Minsait · Ciudad de México · Sector de Telecomunicaciones</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">2026</div>
-        <div class="tl-title">Desarrollador Principal de RiskEnsemble</div>
-        <div class="tl-sub">Framework open source en Python para la evaluación de riesgo crediticio con Explainable AI</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">2025</div>
-        <div class="tl-title">Investigador en Machine Learning — Servicio Social</div>
-        <div class="tl-sub">Facultad de Ciencias, UNAM · Clasificación de exoplanetas (NASA Kepler) · Presentación en el Congreso Nacional de Física</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-period">2022 – Actualidad</div>
-        <div class="tl-title">Estudios de Licenciatura en Física</div>
-        <div class="tl-sub">Facultad de Ciencias, UNAM · Becario del Programa Bécalos de Excelencia Académica</div>
+    <div class="proj-card">
+      <div class="proj-card-inner">
+        <div class="proj-thumb">04</div>
+        <div class="proj-body">
+          <div class="proj-year">2026</div>
+          <h3 class="proj-title">Modelado Financiero No Lineal</h3>
+          <div class="proj-inst">Proyecto de Análisis Financiero</div>
+          <ul class="proj-desc-list">
+            <li>Entrené un modelo de regresión fundamentado en Random Forest procesando 5 años de datos bursátiles (Yahoo Finance API) para la extracción de patrones en series temporales.</li>
+            <li>Desarrollé un dashboard analítico en Tableau que documenta de forma visual los límites de extrapolación predictiva del algoritmo frente a la volatilidad del mercado real.</li>
+          </ul>
+        </div>
       </div>
     </div>
+
   </section>
 
   <section class="section" id="educacion">
@@ -676,19 +588,21 @@
       <div class="sec-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
       </div>
-      <h2 class="sec-title">Educación Formal</h2>
+      <h2 class="sec-title">Educación</h2>
     </div>
 
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2022 – Actualidad</div>
-        <div class="tl-title">Licenciatura en Física (Créditos Concluidos)</div>
-        <div class="tl-sub">
-          Universidad Nacional Autónoma de México · Facultad de Ciencias<br>
-          Becario Bécalos de Excelencia Académica · En proceso de evaluación de modalidad de titulación<br><br>
-          <em>Formación analítica: Álgebra Lineal, Ecuaciones Diferenciales, Variable Compleja, Probabilidad I y II,
-          Inferencia Estadística, Física Computacional, Electrónica, Ciencia de Datos.
-          Estudios complementarios en Econometría (modelos de regresión y series de tiempo).</em>
+        <div class="tl-title">Licenciatura en Física (Créditos concluidos)</div>
+        <div class="tl-sub">Universidad Nacional Autónoma de México (UNAM)</div>
+        <ul class="tl-list">
+          <li>En proceso de evaluación de modalidad de titulación.</li>
+          <li>Reconocido como Becario del Programa Bécalos de Excelencia Académica.</li>
+          <li>Promedio académico destacado.</li>
+        </ul>
+        <div class="tl-sub" style="margin-top: 15px;">
+          <strong>Materias y áreas de conocimiento:</strong> Álgebra Lineal, Ecuaciones Diferenciales, Variable Compleja, Probabilidad I y II, Inferencia Estadística, Física Computacional, Electrónica, Ciencia de Datos, Econometría, Modelos de Regresión y Series de Tiempo.
         </div>
       </div>
     </div>
@@ -699,70 +613,77 @@
       <div class="sec-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
       </div>
-      <h2 class="sec-title">Competencias Técnicas</h2>
+      <h2 class="sec-title">Habilidades y Certificaciones</h2>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Lenguajes de Programación</div>
+      <div class="skills-label">Lenguajes y Arquitectura</div>
       <div class="pills">
         <span class="pill">Python</span>
         <span class="pill">R</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">SQL</span>
+        <span class="pill">SQL (Bases de Datos)</span>
+        <span class="pill">HTML y JavaScript</span>
+        <span class="pill">Git / GitHub</span>
       </div>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Algoritmos & Machine Learning</div>
-      <div class="pills">
-        <span class="pill">XGBoost</span>
-        <span class="pill">LightGBM</span>
-        <span class="pill">Scikit-Learn</span>
-        <span class="pill">Random Forest</span>
-        <span class="pill">Redes Neuronales</span>
-        <span class="pill">SHAP / XAI</span>
-        <span class="pill">Regresión Logística</span>
-      </div>
-    </div>
-
-    <div class="skills-block">
-      <div class="skills-label">Librerías de Procesamiento (Python)</div>
+      <div class="skills-label">Librerías / Frameworks Analíticos</div>
       <div class="pills">
         <span class="pill">NumPy</span>
         <span class="pill">Pandas</span>
         <span class="pill">Matplotlib</span>
-        <span class="pill">Streamlit</span>
+        <span class="pill">Scikit-Learn</span>
+        <span class="pill">XGBoost</span>
+        <span class="pill">LightGBM</span>
+        <span class="pill">PySpark</span>
       </div>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Infraestructura & Cloud Computing</div>
+      <div class="skills-label">Dominio Teórico y Práctico</div>
       <div class="pills">
-        <span class="pill">Amazon Web Services (AWS)</span>
-        <span class="pill">Amazon Redshift</span>
-        <span class="pill">Aurora DSQL</span>
+        <span class="pill">Modelos de Machine Learning</span>
+        <span class="pill">Análisis de Datos Complejos</span>
+        <span class="pill">Estadística e Inferencia</span>
+        <span class="pill">Cloud Computing (AWS)</span>
         <span class="pill">Serverless Architecture</span>
-        <span class="pill">Control de Versiones (Git / GitHub)</span>
+        <span class="pill">Amazon Redshift</span>
       </div>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Inteligencia de Negocios (BI) & Visualización</div>
+      <div class="skills-label">Software de Negocios y Competencias Clave</div>
       <div class="pills">
-        <span class="pill">Tableau</span>
         <span class="pill">Power BI</span>
-        <span class="pill">Microsoft Excel Avanzado</span>
+        <span class="pill">Tableau</span>
+        <span class="pill">Excel Avanzado</span>
+        <span class="pill">Comunicación Técnica</span>
       </div>
     </div>
 
-    <div class="skills-block">
-      <div class="skills-label">Fundamentos Matemáticos</div>
-      <div class="pills">
-        <span class="pill">Álgebra Lineal Aplicada</span>
-        <span class="pill">Inferencia Estadística</span>
-        <span class="pill">Análisis de Series de Tiempo</span>
-        <span class="pill">Modelado Econométrico</span>
-        <span class="pill">Ecuaciones Diferenciales</span>
+    <div class="skills-label" style="margin-top: 40px;">Certificaciones</div>
+    <div style="margin-top:15px">
+      <div class="cert-item">
+        <div class="cert-badge">AWS</div>
+        <div class="cert-body">
+          <div class="cert-name">Machine Learning: Essentials for Decision Makers & Planning a ML Project</div>
+          <div class="cert-detail">AWS Training & Certification · Mayo 2026</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">AWS</div>
+        <div class="cert-body">
+          <div class="cert-name">Data & Analytics: Serverless Analytics & Amazon Redshift</div>
+          <div class="cert-detail">AWS Training & Certification · Mayo 2026</div>
+        </div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">AWS</div>
+        <div class="cert-body">
+          <div class="cert-name">Databases: Migración de NoSQL a Amazon Aurora DSQL</div>
+          <div class="cert-detail">AWS Training & Certification · Mayo 2026</div>
+        </div>
       </div>
     </div>
 
@@ -774,33 +695,8 @@
           <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
         </div>
         <div class="lang-item">
-          <div class="lang-row"><span>Inglés</span><span>Nivel B1 (Intermedio)</span></div>
+          <div class="lang-row"><span>Inglés</span><span>Intermedio (Nivel B1)</span></div>
           <div class="bar"><div class="bar-fill" style="width:58%"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-label" style="margin-top: 40px;">Certificaciones Tecnológicas</div>
-    <div style="margin-top:15px">
-      <div class="cert-item">
-        <div class="cert-badge">AWS</div>
-        <div class="cert-body">
-          <div class="cert-name">Machine Learning Essentials for Decision Makers</div>
-          <div class="cert-detail">Planning a Machine Learning Project · Amazon Web Services · Mayo 2026</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge">AWS</div>
-        <div class="cert-body">
-          <div class="cert-name">Data & Analytics Fundamentals</div>
-          <div class="cert-detail">Serverless Analytics & Amazon Redshift · Amazon Web Services · Mayo 2026</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-badge">AWS</div>
-        <div class="cert-body">
-          <div class="cert-name">Database Fundamentals</div>
-          <div class="cert-detail">Migración de Arquitecturas NoSQL a Amazon Aurora DSQL · Mayo 2026</div>
         </div>
       </div>
     </div>
@@ -810,8 +706,7 @@
   <footer>
     Jesús Alberto Cerón Hernández &nbsp;·&nbsp;
     <a href="mailto:jesusceron818@gmail.com">jesusceron818@gmail.com</a> &nbsp;·&nbsp;
-    <a href="https://github.com/Alberto-Ceron" target="_blank">github.com/Alberto-Ceron</a> &nbsp;·&nbsp;
-    Ciudad de México, México
+    <a href="https://github.com/Alberto-Ceron" target="_blank">github.com/alberto-ceron</a>
   </footer>
 
 </div>
