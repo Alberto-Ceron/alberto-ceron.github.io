@@ -3,142 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesús Alberto Cerón Hernández | Portafolio</title>
+    <title>Jesús Alberto Cerón Hernández - Perfil Académico</title>
     <style>
-        /* Variables de colores para el tema claro y oscuro */
-        :root {
-            --bg-color: #f8f9fa;
-            --text-color: #212529;
-            --card-bg: #ffffff;
-            --accent-color: #0366d6;
-        }
-
-        .dark-mode {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --card-bg: #1e1e1e;
-            --accent-color: #58a6ff;
-        }
-
+        /* Diseño inspirado en sitios académicos e institucionales (CERN / UNAM) */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            transition: background-color 0.3s, color 0.3s;
+            background-color: #f5f6f8;
+            color: #333;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
+        /* Encabezado Institucional */
         header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            color: var(--accent-color);
-            font-weight: 400;
-            margin-top: 0;
-        }
-
-        /* Estilos de las tarjetas de proyectos */
-        .proyecto-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .tarjeta {
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
-        }
-
-        .tarjeta h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-        }
-
-        /* Estilo del botón de modo oscuro */
-        #btnModoOscuro {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 20px;
-            background-color: var(--accent-color);
+            background-color: #003366; /* Azul profundo académico */
             color: white;
-            cursor: pointer;
-            font-weight: bold;
+            padding: 30px 50px;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        header h2 {
+            margin: 8px 0 0 0;
+            font-size: 18px;
+            font-weight: 300;
+            color: #cce0ff;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #004080;
+            padding: 12px 50px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenedor principal a dos columnas */
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Columna Izquierda (Datos de contacto y foto) */
+        .sidebar {
+            width: 25%;
+            border-right: 1px solid #e0e0e0;
+            padding-right: 30px;
+        }
+
+        .foto-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            color: #003366;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 5px 0 15px 0;
+        }
+
+        /* Columna Derecha (Contenido principal) */
+        .content {
+            width: 75%;
+            padding-left: 30px;
+        }
+
+        .content h2 {
+            color: #003366;
+            font-weight: normal;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .content p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Formato de proyectos o publicaciones */
+        .item-academico {
+            margin-bottom: 25px;
+        }
+
+        .item-academico h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .item-academico p {
+            margin: 0 0 5px 0;
+            font-size: 15px;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #e6f0ff;
+            color: #003366;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-top: 5px;
+            border: 1px solid #b3d4ff;
+        }
+
+        /* Botón interactivo para simular descarga */
+        .btn-academico {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .btn-academico:hover {
+            background-color: #00264d;
+        }
+
     </style>
 </head>
 <body>
 
-    <button id="btnModoOscuro">🌙 Modo Oscuro</button>
+    <header>
+        <h1>Jesús Alberto Cerón Hernández</h1>
+        <h2>Facultad de Ciencias | Universidad Nacional Autónoma de México</h2>
+    </header>
+
+    <nav>
+        <a href="#semblanza">Semblanza</a>
+        <a href="#proyectos">Proyectos de Investigación</a>
+        <a href="#trayectoria">Trayectoria</a>
+    </nav>
 
     <div class="container">
-        <header>
-            <h1>Jesús Alberto Cerón Hernández</h1>
-            <h2>Físico | Data Science & Machine Learning</h2>
-            <p>Especializado en modelado predictivo, desarrollo de algoritmos avanzados (Random Forest, XGBoost) y análisis de datos complejos para resolver problemas desde la astrofísica hasta el riesgo financiero.</p>
-        </header>
-
-        <section>
-            <h2>Sobre Mí</h2>
-            <p>Estudiante de Física en la Facultad de Ciencias de la UNAM. Combino el rigor analítico de la ciencia con herramientas modernas de programación. Actualmente enfocado en la aplicación de Machine Learning, desarrollo de librerías en Python y econometría.</p>
-        </section>
-
-        <section>
-            <h2>Proyectos Destacados</h2>
-            <div class="proyecto-grid">
-                
-                <div class="tarjeta">
-                    <h3>RiskEnsemble</h3>
-                    <p>Librería personalizada en Python para la evaluación de riesgo financiero. Desarrollada integrando modelos predictivos avanzados para optimizar la toma de decisiones basada en datos.</p>
-                </div>
-
-                <div class="tarjeta">
-                    <h3>Clasificación de Exoplanetas</h3>
-                    <p>Aplicación de técnicas de Machine Learning (árboles de decisión y bosques aleatorios) para identificar y clasificar exoplanetas utilizando bases de datos de la misión Kepler de la NASA. Proyecto presentado en el Congreso Nacional de Física.</p>
-                </div>
-
-                <div class="tarjeta">
-                    <h3>Datathon Minsait</h3>
-                    <p>Primer lugar en la categoría de Data Science y segundo lugar general en competencia de desarrollo de soluciones analíticas bajo presión.</p>
-                </div>
-
+        <div class="sidebar">
+            <div class="foto-placeholder">
+                [Espacio para Fotografía Formal]
             </div>
-        </section>
+            
+            <h3>Afiliación</h3>
+            <p>Estudiante de Física<br>Facultad de Ciencias, UNAM<br>Ciudad de México, México</p>
+
+            <h3>Áreas de Interés</h3>
+            <p>Data Science<br>Machine Learning<br>Astrofísica Computacional<br>Econometría</p>
+
+            <h3>Contacto</h3>
+            <p>
+                <a href="https://github.com/ceronbuu" style="color: #003366; text-decoration: none;">GitHub: @ceronbuu</a>
+            </p>
+        </div>
+
+        <div class="content">
+            <h2 id="semblanza">Semblanza</h2>
+            <p>Especialista en Data Science y Machine Learning enfocado en el desarrollo de modelos predictivos y el análisis de datos complejos. Con formación matemática y física, aplico algoritmos avanzados para la resolución de problemas interdisciplinarios, abarcando desde la identificación de cuerpos celestes hasta la modelación de riesgo financiero.</p>
+
+            <br>
+            
+            <h2 id="proyectos">Proyectos y Desarrollo de Software</h2>
+            
+            <div class="item-academico">
+                <h4>Aplicación de técnicas de Machine Learning para la clasificación de exoplanetas</h4>
+                <p>Implementación de árboles de decisión y bosques aleatorios para el análisis de curvas de luz utilizando los registros de la misión Kepler de la NASA. Trabajo presentado en formato póster en el Congreso Nacional de Física.</p>
+                <span class="etiqueta">Astrofísica</span> <span class="etiqueta">Scikit-Learn</span> <span class="etiqueta">Random Forest</span>
+            </div>
+
+            <div class="item-academico">
+                <h4>RiskEnsemble</h4>
+                <p>Autor y desarrollador principal de una librería en Python diseñada para la evaluación econométrica y de riesgo. El motor estadístico permite optimizar la toma de decisiones bajo incertidumbre utilizando modelos de ensamble.</p>
+                <span class="etiqueta">Fintech</span> <span class="etiqueta">Econometría</span> <span class="etiqueta">Python</span>
+            </div>
+
+            <div class="item-academico">
+                <h4>Datathon Minsait 2026</h4>
+                <p>Primer lugar en la categoría de Data Science y segundo lugar en la clasificación general. Desarrollo e implementación de soluciones analíticas de alto rendimiento en entornos de tiempo limitado.</p>
+                <span class="etiqueta">Competencia</span> <span class="etiqueta">Modelado Predictivo</span>
+            </div>
+
+            <br>
+
+            <h2 id="trayectoria">Competencias Técnicas</h2>
+            <p>Programación orientada a objetos en Python, dominio de bibliotecas de Machine Learning (XGBoost, Scikit-learn), bases en R y herramientas de visualización de datos. Desarrollo continuo en JavaScript para el despliegue web de herramientas analíticas.</p>
+
+            <button class="btn-academico" id="btnContacto">Generar Tarjeta de Contacto</button>
+            <p id="mensajeContacto" style="color: #004080; font-weight: bold; margin-top: 10px;"></p>
+        </div>
     </div>
 
     <script>
-        const botonOscuro = document.getElementById('btnModoOscuro');
-        const cuerpo = document.body;
+        const btnContacto = document.getElementById('btnContacto');
+        const mensaje = document.getElementById('mensajeContacto');
 
-        botonOscuro.addEventListener('click', function() {
-            // "toggle" agrega la clase si no está, y la quita si ya está
-            cuerpo.classList.toggle('dark-mode');
-
-            // Cambiar el texto del botón dependiendo del modo
-            if (cuerpo.classList.contains('dark-mode')) {
-                botonOscuro.innerText = '☀️ Modo Claro';
-            } else {
-                botonOscuro.innerText = '🌙 Modo Oscuro';
-            }
+        btnContacto.addEventListener('click', function() {
+            mensaje.innerText = "¡Tarjeta generada! Para consultas académicas, contactar mediante el correo institucional de la UNAM.";
         });
     </script>
 
