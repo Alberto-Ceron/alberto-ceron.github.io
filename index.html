@@ -6,42 +6,51 @@
   <meta name="description" content="Jesús Alberto Cerón Hernández — Data Scientist & ML Specialist, UNAM"/>
   <meta name="keywords" content="Cerón,ceronbuu,UNAM,Data Science,Machine Learning,Física,XGBoost,Python"/>
   <title>Jesús Alberto Cerón Hernández</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
     /* ═══════════════════════════════════════
        PALETA INSTITUCIONAL / ACADÉMICA
     ═══════════════════════════════════════ */
     :root {
-      --navy:   #003366; /* Azul profundo académico (Encabezados) */
-      --blue:   #004080; /* Azul secundario (Navegación) */
-      --mid:    #0055a4; /* Azul de acento (Enlaces y botones) */
+      --navy:   #002b5e; /* Azul profundo académico */
+      --blue:   #003d82; /* Azul secundario */
+      --mid:    #0055a4; /* Azul de acento */
       --sky:    #4d94ff; /* Azul claro (Detalles) */
-      --pale:   #e6f0ff; /* Fondo de etiquetas y barras */
-      --white:  #ffffff; /* Blanco puro (Tarjetas) */
-      --off:    #f5f6f8; /* Gris muy claro (Fondo de la página) */
-      --text:   #333333; /* Texto principal */
-      --muted:  #555555; /* Texto secundario */
-      --line:   #d1d5db; /* Líneas divisorias */
-      --border-blue: #b3d4ff; /* Bordes de etiquetas */
+      --pale:   #eef2f7; /* Fondo de etiquetas y barras */
+      --white:  #ffffff; /* Blanco puro */
+      --off:    #f8f9fa; /* Gris muy claro (Fondo de la página) */
+      --text:   #2b3035; /* Texto principal */
+      --muted:  #5c636a; /* Texto secundario */
+      --line:   #dee2e6; /* Líneas divisorias */
+      --border: #ced4da; /* Bordes generales */
       --max:    850px;
-      --r:      6px; /* Bordes ligeramente redondeados (más formales) */
+      --r:      4px; /* Bordes casi rectos para mayor formalidad */
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 15.5px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 15px;
       line-height: 1.7;
       color: var(--text);
       background: var(--off);
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    a { color: var(--mid); text-decoration: none; }
+    a { color: var(--mid); text-decoration: none; transition: color 0.2s; }
     a:hover { text-decoration: underline; color: var(--navy); }
+
+    /* Tipografía para Títulos */
+    h1, h2, h3, .hero-name, .sec-title, .award-title, .proj-title {
+      font-family: 'Lora', Georgia, serif;
+    }
 
     /* ═══════════════════════════════════════
        HERO HEADER
@@ -51,90 +60,93 @@
       color: var(--white);
       padding: 0 20px;
       position: relative;
-      overflow: hidden;
-      border-bottom: 4px solid var(--mid);
+      border-bottom: 5px solid var(--mid);
     }
 
     .hero-inner {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 56px 0 48px;
+      padding: 60px 0 50px;
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 45px;
       position: relative;
-      z-index: 1;
     }
 
     .hero-photo {
-      width: 140px; height: 140px;
+      width: 145px; height: 145px;
       border-radius: 50%;
-      border: 4px solid var(--white);
+      border: 3px solid var(--white);
       object-fit: cover;
       flex-shrink: 0;
       background: var(--blue);
       display: flex; align-items: center; justify-content: center;
-      font-size: 14px; color: var(--pale);
+      font-size: 13px; color: rgba(255,255,255,0.7);
       text-align: center; line-height: 1.4;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      font-weight: 300;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     .hero-name {
-      font-family: 'Fraunces', serif;
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.1;
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1.15;
       color: var(--white);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
     }
 
     .hero-role {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .75rem;
-      letter-spacing: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--pale);
-      margin-bottom: 12px;
+      color: #b3d4ff;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
 
     .hero-bio {
-      font-size: .95rem;
+      font-size: 0.95rem;
       color: var(--white);
-      max-width: 550px;
+      max-width: 600px;
       font-weight: 300;
-      line-height: 1.65;
-      margin-bottom: 20px;
+      line-height: 1.7;
+      margin-bottom: 24px;
       opacity: 0.9;
     }
 
     .hero-links {
-      display: flex; flex-wrap: wrap; gap: 10px;
+      display: flex; flex-wrap: wrap; gap: 12px;
     }
 
     .hero-link {
-      display: flex; align-items: center; gap: 6px;
-      font-size: .8rem;
-      font-family: 'JetBrains Mono', monospace;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
       color: var(--white);
-      padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: 4px;
-      transition: all .2s;
-      background: transparent;
+      padding: 6px 0;
+      margin-right: 15px;
+      border-bottom: 1px solid transparent;
     }
     .hero-link:hover {
-      background: rgba(255,255,255,0.15);
-      border-color: var(--white);
       text-decoration: none;
+      border-bottom: 1px solid var(--white);
+    }
+    
+    .hero-link svg {
+      width: 16px; height: 16px;
+      opacity: 0.8;
     }
 
     /* ═══════════════════════════════════════
        NAV (sticky under hero)
     ═══════════════════════════════════════ */
     .topnav {
-      background: var(--blue);
+      background: var(--white);
       position: sticky; top: 0; z-index: 100;
-      box-shadow: 0 2px 5px rgba(0,0,0,.1);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
     .topnav-inner {
       max-width: var(--max);
@@ -144,19 +156,17 @@
     }
     .topnav a {
       display: block;
-      padding: 14px 22px;
-      font-size: .85rem;
+      padding: 16px 24px;
+      font-size: 0.85rem;
       font-weight: 500;
-      letter-spacing: .5px;
-      color: rgba(255,255,255,0.8);
-      border-bottom: 3px solid transparent;
-      transition: all .2s;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
     }
     .topnav a:hover {
-      color: var(--white);
-      border-bottom-color: var(--white);
+      color: var(--navy);
+      border-bottom-color: var(--navy);
       text-decoration: none;
-      background: rgba(255,255,255,0.05);
+      background: var(--off);
     }
 
     /* ═══════════════════════════════════════
@@ -168,27 +178,26 @@
       padding: 0 20px 80px;
     }
 
-    .section { padding: 52px 0 0; }
+    .section { padding: 60px 0 0; }
 
     .sec-header {
-      display: flex; align-items: center; gap: 14px;
+      display: flex; align-items: center; gap: 12px;
       margin-bottom: 30px;
-      border-bottom: 2px solid var(--navy);
+      border-bottom: 1px solid var(--navy);
       padding-bottom: 10px;
     }
 
     .sec-icon {
-      width: 36px; height: 36px;
-      border-radius: 4px;
-      background: var(--navy);
-      color: var(--white);
+      color: var(--navy);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
+    }
+    
+    .sec-icon svg {
+      width: 24px; height: 24px;
+      stroke-width: 1.5;
     }
 
     .sec-title {
-      font-family: 'Fraunces', serif;
       font-size: 1.6rem;
       font-weight: 600;
       color: var(--navy);
@@ -197,60 +206,63 @@
     hr {
       border: none;
       border-top: 1px solid var(--line);
-      margin: 48px 0 0;
+      margin: 50px 0 0;
     }
 
     /* ═══════════════════════════════════════
-       AWARD BANNER (Diseño limpio y formal)
+       AWARD BANNER
     ═══════════════════════════════════════ */
     .award {
       background: var(--white);
       border: 1px solid var(--line);
-      border-left: 5px solid var(--navy);
+      border-left: 4px solid var(--mid);
       border-radius: var(--r);
-      padding: 24px 28px;
+      padding: 24px 30px;
       display: flex; gap: 20px; align-items: flex-start;
-      box-shadow: 0 2px 8px rgba(0,0,0,.04);
       margin-bottom: 0;
     }
-    .award-medal { font-size: 2.2rem; flex-shrink: 0; }
+    .award-medal { 
+      color: var(--mid);
+      margin-top: 2px;
+    }
+    .award-medal svg { width: 32px; height: 32px; stroke-width: 1.5; }
+    
     .award-body { position: relative; z-index: 1; }
     .award-title {
-      font-family: 'Fraunces', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--navy);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-weight: 600;
+      line-height: 1.4;
     }
     .award-title em { color: var(--mid); font-style: normal; }
     .award-desc {
-      font-size: .88rem;
+      font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.6;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     /* ═══════════════════════════════════════
-       ETIQUETAS GENERALES (Tags, Chips, Pills)
+       ETIQUETAS GENERALES
     ═══════════════════════════════════════ */
     .award-chips, .proj-tags, .pills { display: flex; flex-wrap: wrap; gap: 8px; }
     
     .chip, .ptag, .pill {
       font-family: 'JetBrains Mono', monospace;
-      font-size: .7rem;
+      font-size: 0.7rem;
       padding: 4px 10px;
-      border-radius: 4px;
+      border-radius: 3px;
       background: var(--pale);
-      color: var(--navy);
-      border: 1px solid var(--border-blue);
+      color: var(--text);
+      border: 1px solid var(--border);
       font-weight: 500;
       transition: all 0.2s;
     }
     
     .pill:hover {
-      background: var(--mid);
-      color: var(--white);
-      border-color: var(--mid);
+      background: var(--line);
+      border-color: var(--muted);
     }
 
     /* ═══════════════════════════════════════
@@ -272,60 +284,62 @@
       border: 1px solid var(--line);
       border-radius: var(--r);
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       background: var(--white);
-      box-shadow: 0 2px 5px rgba(0,0,0,.03);
-      transition: box-shadow .25s, transform .25s;
+      transition: box-shadow .2s, border-color .2s;
     }
     .proj-card:hover {
-      box-shadow: 0 6px 15px rgba(0,0,0,.08);
-      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,.04);
+      border-color: #b3d4ff;
     }
 
     .proj-card-inner {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 100px 1fr;
     }
 
     .proj-thumb {
       background: var(--pale);
       display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
-      min-height: 100%;
       border-right: 1px solid var(--line);
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      color: var(--border);
+      font-weight: 700;
+      font-style: italic;
     }
 
-    .proj-body { padding: 24px; }
+    .proj-body { padding: 26px; }
 
     .proj-year {
       font-family: 'JetBrains Mono', monospace;
-      font-size: .7rem;
+      font-size: 0.75rem;
       color: var(--muted);
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .proj-title {
-      font-family: 'Fraunces', serif;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--navy);
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      line-height: 1.3;
     }
 
     .proj-inst {
-      font-size: .85rem;
+      font-size: 0.9rem;
       color: var(--mid);
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .proj-desc {
-      font-size: .9rem;
-      color: var(--muted);
+      font-size: 0.95rem;
+      color: var(--text);
       line-height: 1.65;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       text-align: justify;
     }
 
@@ -337,102 +351,109 @@
       content: '';
       position: absolute;
       left: 7px; top: 8px; bottom: 8px;
-      width: 2px;
-      background: var(--line);
+      width: 1px;
+      background: var(--border);
     }
 
     .tl-item {
       position: relative;
-      padding: 0 0 28px 24px;
+      padding: 0 0 32px 24px;
     }
     .tl-item:last-child { padding-bottom: 0; }
 
     .tl-item::before {
       content: '';
       position: absolute;
-      left: -21px; top: 7px;
-      width: 12px; height: 12px;
+      left: -20px; top: 7px;
+      width: 11px; height: 11px;
       border-radius: 50%;
       background: var(--white);
-      border: 2px solid var(--mid);
+      border: 2px solid var(--navy);
     }
 
     .tl-period {
       font-family: 'JetBrains Mono', monospace;
-      font-size: .75rem;
+      font-size: 0.8rem;
       color: var(--muted);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .tl-title {
+      font-family: 'Lora', serif;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--navy);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .tl-sub {
-      font-size: .9rem;
+      font-size: 0.95rem;
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     /* ═══════════════════════════════════════
        SKILLS & CERTS
     ═══════════════════════════════════════ */
-    .skills-block { margin-bottom: 28px; }
+    .skills-block { margin-bottom: 30px; }
     .skills-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .75rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--navy);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-weight: 600;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
     }
 
     .cert-item {
-      display: flex; gap: 14px; align-items: center;
-      padding: 14px 0;
+      display: flex; gap: 16px; align-items: center;
+      padding: 16px 0;
       border-bottom: 1px solid var(--line);
     }
     .cert-item:last-child { border-bottom: none; }
+    
     .cert-badge {
-      width: 40px; height: 40px;
-      border-radius: 4px;
-      background: var(--pale);
-      border: 1px solid var(--border-blue);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 3px;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      min-width: 55px;
     }
-    .cert-name { font-weight: 600; font-size: .95rem; color: var(--navy); margin-bottom: 2px; }
-    .cert-detail { font-size: .85rem; color: var(--muted); }
+    
+    .cert-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--text); margin-bottom: 2px; }
+    .cert-detail { font-size: 0.85rem; color: var(--muted); }
 
     /* ═══════════════════════════════════════
        LANGS
     ═══════════════════════════════════════ */
     .lang-item { margin-bottom: 16px; }
-    .lang-row { display: flex; justify-content: space-between; font-size: .9rem; margin-bottom: 5px; color: var(--text); }
+    .lang-row { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 6px; color: var(--text); font-weight: 500;}
     .lang-row span:last-child {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: .75rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.85rem;
       color: var(--muted);
     }
-    .bar { height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+    .bar { height: 6px; border-radius: 2px; background: var(--line); overflow: hidden; }
     .bar-fill {
       height: 100%;
-      border-radius: 4px;
-      background: var(--mid);
+      background: var(--navy);
     }
 
     /* ═══════════════════════════════════════
        FOOTER
     ═══════════════════════════════════════ */
     footer {
-      margin-top: 64px;
-      padding: 28px 0;
+      margin-top: 70px;
+      padding: 30px 0;
       border-top: 1px solid var(--line);
       text-align: center;
-      font-size: .85rem;
+      font-size: 0.85rem;
       color: var(--muted);
     }
     footer a { color: var(--mid); font-weight: 500;}
@@ -441,25 +462,16 @@
        RESPONSIVE
     ═══════════════════════════════════════ */
     @media (max-width: 620px) {
-      .hero-inner { flex-direction: column; text-align: center; padding: 40px 0 36px; }
-      .hero-name { font-size: 1.8rem; }
-      .hero-links { justify-content: center; }
+      .hero-inner { flex-direction: column; text-align: center; padding: 40px 0 30px; gap: 20px; }
+      .hero-name { font-size: 2rem; }
+      .hero-links { justify-content: center; margin-top: 10px; }
+      .hero-link { margin-right: 5px; }
       .proj-card-inner { grid-template-columns: 1fr; }
-      .proj-thumb { min-height: 120px; border-right: none; border-bottom: 1px solid var(--line); }
-      .topnav a { padding: 12px 10px; font-size: .75rem; }
-      .award { flex-direction: column; text-align: center; align-items: center; }
+      .proj-thumb { min-height: 80px; border-right: none; border-bottom: 1px solid var(--line); }
+      .topnav { overflow-x: auto; white-space: nowrap; }
+      .topnav a { padding: 14px 16px; font-size: 0.8rem; }
+      .award { flex-direction: column; align-items: flex-start; padding: 20px; }
     }
-
-    /* ── fade-up animation ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero-inner { animation: fadeUp .6s ease both; }
-    .proj-card  { animation: fadeUp .5s ease both; }
-    .proj-card:nth-child(2) { animation-delay: .08s; }
-    .proj-card:nth-child(3) { animation-delay: .14s; }
-    .proj-card:nth-child(4) { animation-delay: .2s; }
   </style>
 </head>
 <body>
@@ -467,17 +479,29 @@
 <header class="hero">
   <div class="hero-inner">
 
-    <div class="hero-photo">Tu foto<br>aquí</div>
+    <div class="hero-photo">Fotografía<br>Formal</div>
 
     <div class="hero-text">
-      <div class="hero-name">Jesús Alberto<br>Cerón Hernández</div>
+      <h1 class="hero-name">Jesús Alberto Cerón Hernández</h1>
       <div class="hero-role">Data Scientist · ML Specialist · Físico · UNAM</div>
-      <p class="hero-bio">Modelos predictivos aplicados a datos astronómicos, financieros y médicos. Ganador del 1er. Data Challenge Minsait México 2026.</p>
+      <p class="hero-bio">Desarrollo de modelos predictivos aplicados a datos astronómicos, financieros y médicos. Ganador del 1er. Data Challenge Minsait México 2026.</p>
       <div class="hero-links">
-        <a class="hero-link" href="mailto:jesusceron818@gmail.com">✉ jesusceron818@gmail.com</a>
-        <a class="hero-link" href="https://www.linkedin.com/in/albertoceron" target="_blank">💼 LinkedIn</a>
-        <a class="hero-link" href="https://github.com/Alberto-Ceron" target="_blank">⌥ GitHub</a>
-        <a class="hero-link" href="tel:5517764221">📱 5517764221</a>
+        <a class="hero-link" href="mailto:jesusceron818@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          jesusceron818@gmail.com
+        </a>
+        <a class="hero-link" href="https://www.linkedin.com/in/albertoceron" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          LinkedIn
+        </a>
+        <a class="hero-link" href="https://github.com/Alberto-Ceron" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          GitHub
+        </a>
+        <a class="hero-link" href="tel:5517764221">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          5517764221
+        </a>
       </div>
     </div>
 
@@ -487,7 +511,7 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="#semblanza">Semblanza</a>
-    <a href="#proyectos">Proyectos</a>
+    <a href="#proyectos">Proyectos de Investigación</a>
     <a href="#trayectoria">Trayectoria</a>
     <a href="#educacion">Educación</a>
     <a href="#habilidades">Habilidades</a>
@@ -498,8 +522,10 @@
 
   <section class="section" id="semblanza">
     <div class="sec-header">
-      <div class="sec-icon">👤</div>
-      <h2 class="sec-title">Semblanza</h2>
+      <div class="sec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </div>
+      <h2 class="sec-title">Semblanza Profesional</h2>
     </div>
 
     <p class="bio-text">
@@ -514,12 +540,14 @@
       en Econometría, AWS Cloud y JavaScript para despliegue de herramientas analíticas en la web.
     </p>
 
-    <div style="margin-top:28px">
+    <div style="margin-top:30px">
       <div class="award">
-        <div class="award-medal">🏆</div>
+        <div class="award-medal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
         <div class="award-body">
-          <div class="award-title"><em>1.er lugar</em> — Reto Data Science · 1er. Data Challenge Minsait México 2026</div>
-          <div class="award-desc">Lideré la solución ganadora para un caso de negocio real en telecomunicaciones. Arquitectura multi-modelo: Regresión Logística (baseline) + XGBoost + LightGBM, optimizados por Recall y ROC-AUC. Resultados presentados ante panel de expertos de la industria.</div>
+          <div class="award-title"><em>1.er lugar</em> — Reto Data Science · Data Challenge Minsait México 2026</div>
+          <div class="award-desc">Liderazgo en el desarrollo de la solución analítica para un caso de negocio en telecomunicaciones. Implementación de arquitectura multi-modelo: Regresión Logística (baseline), XGBoost y LightGBM, con optimización métrica orientada a Recall y ROC-AUC. Defensa técnica de resultados ante panel de expertos.</div>
           <div class="award-chips">
             <span class="chip">XGBoost</span>
             <span class="chip">LightGBM</span>
@@ -534,29 +562,30 @@
 
   <section class="section" id="proyectos">
     <div class="sec-header">
-      <div class="sec-icon">🚀</div>
+      <div class="sec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+      </div>
       <h2 class="sec-title">Proyectos de Investigación y Desarrollo</h2>
     </div>
 
     <div class="proj-card">
       <div class="proj-card-inner">
-        <div class="proj-thumb">🔭</div>
+        <div class="proj-thumb">01</div>
         <div class="proj-body">
           <div class="proj-year">2025 · Servicio Social, UNAM</div>
-          <div class="proj-title">Clasificación de Exoplanetas con Machine Learning</div>
+          <h3 class="proj-title">Clasificación de Exoplanetas con Machine Learning</h3>
           <div class="proj-inst">Facultad de Ciencias, UNAM · Misión Kepler, NASA</div>
           <p class="proj-desc">
             Implementación de algoritmos supervisados (Árboles de Decisión, Random Forest, Redes Neuronales,
-            XGBoost, LightGBM) para clasificar exoplanetas usando datos de la misión Kepler de la NASA.
-            Limpieza, preprocesamiento y validación estadística de grandes volúmenes de datos astronómicos.
-            <strong style="color:var(--navy)">Resultados presentados en el Congreso Nacional de Física.</strong>
+            XGBoost, LightGBM) para la identificación y clasificación de exoplanetas utilizando registros de la misión Kepler de la NASA.
+            Procesamiento de señales, limpieza de datos y validación estadística de grandes volúmenes de información astronómica.
+            <strong style="color:var(--navy)">Trabajo presentado en formato póster en el Congreso Nacional de Física.</strong>
           </p>
           <div class="proj-tags">
-            <span class="ptag">Astrofísica</span>
+            <span class="ptag">Astrofísica Computacional</span>
             <span class="ptag">NASA Kepler</span>
             <span class="ptag">Scikit-Learn</span>
             <span class="ptag">XGBoost</span>
-            <span class="ptag">LightGBM</span>
             <span class="ptag">Random Forest</span>
           </div>
         </div>
@@ -565,24 +594,22 @@
 
     <div class="proj-card">
       <div class="proj-card-inner">
-        <div class="proj-thumb">📊</div>
+        <div class="proj-thumb">02</div>
         <div class="proj-body">
-          <div class="proj-year">2026 · Open Source Python</div>
-          <div class="proj-title">RiskEnsemble — Framework de ML para Riesgo Crediticio</div>
-          <div class="proj-inst">Proyecto personal · github.com/Alberto-Ceron</div>
+          <div class="proj-year">2026 · Desarrollo Open Source</div>
+          <h3 class="proj-title">RiskEnsemble — Framework de ML para Riesgo Crediticio</h3>
+          <div class="proj-inst">Proyecto personal · Documentación en GitHub</div>
           <p class="proj-desc">
-            Librería modular en Python para predicción prescriptiva de default financiero y detección
-            de anomalías en carteras de crédito. Modelos de ensamble optimizados mediante balanceo de
-            clases. Integración de <strong style="color:var(--navy)">Explainable AI (XAI) con valores SHAP</strong>
-            para interpretabilidad y transparencia regulatoria. Interfaz en Streamlit con
-            simulación de escenarios What-if y Batch Processing (CSV).
+            Desarrollo de librería modular en Python para la predicción prescriptiva de impago financiero y detección
+            de anomalías en carteras de crédito. Construcción de modelos de ensamble con técnicas de balanceo de
+            clases. Integración metodológica de <strong style="color:var(--navy)">Explainable AI (XAI) mediante valores SHAP</strong>
+            para garantizar interpretabilidad y cumplimiento normativo. Incluye interfaz de simulación de escenarios (What-if) vía Streamlit.
           </p>
           <div class="proj-tags">
-            <span class="ptag">Fintech</span>
+            <span class="ptag">Tecnología Financiera (Fintech)</span>
             <span class="ptag">Python</span>
             <span class="ptag">SHAP / XAI</span>
             <span class="ptag">Streamlit</span>
-            <span class="ptag">Random Forest</span>
             <span class="ptag">Econometría</span>
           </div>
         </div>
@@ -591,19 +618,18 @@
 
     <div class="proj-card">
       <div class="proj-card-inner">
-        <div class="proj-thumb">📈</div>
+        <div class="proj-thumb">03</div>
         <div class="proj-body">
-          <div class="proj-year">2026 · Yahoo Finance API</div>
-          <div class="proj-title">Modelado Financiero No Lineal — Series de Tiempo</div>
+          <div class="proj-year">2026 · Extracción de Datos (API)</div>
+          <h3 class="proj-title">Modelado Financiero No Lineal y Series de Tiempo</h3>
           <div class="proj-inst">Proyecto personal</div>
           <p class="proj-desc">
-            Modelo de regresión (Random Forest) entrenado con 5 años de datos bursátiles para identificar
-            patrones en series temporales. Dashboard en Tableau que documenta visualmente los
-            límites de extrapolación del algoritmo frente al mercado real.
+            Entrenamiento de un modelo de regresión fundamentado en Random Forest utilizando un histórico de cinco años de datos bursátiles (Yahoo Finance) para la extracción de patrones en series temporales. Creación de un panel de visualización en Tableau para la evaluación de los
+            límites de extrapolación del algoritmo frente al comportamiento real del mercado.
           </p>
           <div class="proj-tags">
-            <span class="ptag">Series de Tiempo</span>
-            <span class="ptag">Yahoo Finance</span>
+            <span class="ptag">Análisis de Series de Tiempo</span>
+            <span class="ptag">Yahoo Finance API</span>
             <span class="ptag">Tableau</span>
             <span class="ptag">Random Forest</span>
           </div>
@@ -615,50 +641,54 @@
 
   <section class="section" id="trayectoria">
     <div class="sec-header">
-      <div class="sec-icon">📌</div>
-      <h2 class="sec-title">Trayectoria</h2>
+      <div class="sec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      </div>
+      <h2 class="sec-title">Trayectoria Profesional y Académica</h2>
     </div>
 
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2026</div>
-        <div class="tl-title">🥇 Ganador — 1er. Data Challenge Minsait México, Categoría Data Science</div>
-        <div class="tl-sub">Minsait · Ciudad de México · Sector telecomunicaciones</div>
+        <div class="tl-title">Primer Lugar — Data Challenge Minsait México (Data Science)</div>
+        <div class="tl-sub">Minsait · Ciudad de México · Sector de Telecomunicaciones</div>
       </div>
       <div class="tl-item">
         <div class="tl-period">2026</div>
-        <div class="tl-title">Autor de RiskEnsemble — Librería Python de Riesgo Crediticio</div>
-        <div class="tl-sub">Framework open source para predicción de default financiero con Explainable AI</div>
+        <div class="tl-title">Desarrollador Principal de RiskEnsemble</div>
+        <div class="tl-sub">Framework open source en Python para la evaluación de riesgo crediticio con Explainable AI</div>
       </div>
       <div class="tl-item">
         <div class="tl-period">2025</div>
-        <div class="tl-title">Investigación en ML — Servicio Social</div>
-        <div class="tl-sub">Facultad de Ciencias, UNAM · Clasificación de exoplanetas (NASA Kepler) · Resultados en el Congreso Nacional de Física</div>
+        <div class="tl-title">Investigador en Machine Learning — Servicio Social</div>
+        <div class="tl-sub">Facultad de Ciencias, UNAM · Clasificación de exoplanetas (NASA Kepler) · Presentación en el Congreso Nacional de Física</div>
       </div>
       <div class="tl-item">
-        <div class="tl-period">2022 – actualidad</div>
-        <div class="tl-title">Licenciatura en Física</div>
-        <div class="tl-sub">Facultad de Ciencias, UNAM · Becario Bécalos de Excelencia Académica · Promedio destacado</div>
+        <div class="tl-period">2022 – Actualidad</div>
+        <div class="tl-title">Estudios de Licenciatura en Física</div>
+        <div class="tl-sub">Facultad de Ciencias, UNAM · Becario del Programa Bécalos de Excelencia Académica</div>
       </div>
     </div>
   </section>
 
   <section class="section" id="educacion">
     <div class="sec-header">
-      <div class="sec-icon">🎓</div>
-      <h2 class="sec-title">Educación</h2>
+      <div class="sec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      </div>
+      <h2 class="sec-title">Educación Formal</h2>
     </div>
 
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-period">2022 – Actualidad</div>
-        <div class="tl-title">Licenciatura en Física (Créditos concluidos)</div>
+        <div class="tl-title">Licenciatura en Física (Créditos Concluidos)</div>
         <div class="tl-sub">
           Universidad Nacional Autónoma de México · Facultad de Ciencias<br>
-          Becario Bécalos de Excelencia Académica · En proceso de titulación<br>
-          <em>Materias: Álgebra Lineal, Ecuaciones Diferenciales, Variable Compleja, Probabilidad I y II,
+          Becario Bécalos de Excelencia Académica · En proceso de evaluación de modalidad de titulación<br><br>
+          <em>Formación analítica: Álgebra Lineal, Ecuaciones Diferenciales, Variable Compleja, Probabilidad I y II,
           Inferencia Estadística, Física Computacional, Electrónica, Ciencia de Datos.
-          Econometría autodidacta (modelos de regresión y series de tiempo).</em>
+          Estudios complementarios en Econometría (modelos de regresión y series de tiempo).</em>
         </div>
       </div>
     </div>
@@ -666,8 +696,10 @@
 
   <section class="section" id="habilidades">
     <div class="sec-header">
-      <div class="sec-icon">⚙️</div>
-      <h2 class="sec-title">Habilidades Técnicas</h2>
+      <div class="sec-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      </div>
+      <h2 class="sec-title">Competencias Técnicas</h2>
     </div>
 
     <div class="skills-block">
@@ -681,7 +713,7 @@
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Machine Learning & AI</div>
+      <div class="skills-label">Algoritmos & Machine Learning</div>
       <div class="pills">
         <span class="pill">XGBoost</span>
         <span class="pill">LightGBM</span>
@@ -694,7 +726,7 @@
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Librerías Python</div>
+      <div class="skills-label">Librerías de Procesamiento (Python)</div>
       <div class="pills">
         <span class="pill">NumPy</span>
         <span class="pill">Pandas</span>
@@ -704,71 +736,71 @@
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Cloud & Infraestructura</div>
+      <div class="skills-label">Infraestructura & Cloud Computing</div>
       <div class="pills">
-        <span class="pill">AWS</span>
+        <span class="pill">Amazon Web Services (AWS)</span>
         <span class="pill">Amazon Redshift</span>
         <span class="pill">Aurora DSQL</span>
         <span class="pill">Serverless Architecture</span>
-        <span class="pill">Git / GitHub</span>
+        <span class="pill">Control de Versiones (Git / GitHub)</span>
       </div>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Visualización & BI</div>
+      <div class="skills-label">Inteligencia de Negocios (BI) & Visualización</div>
       <div class="pills">
         <span class="pill">Tableau</span>
         <span class="pill">Power BI</span>
-        <span class="pill">Excel</span>
+        <span class="pill">Microsoft Excel Avanzado</span>
       </div>
     </div>
 
     <div class="skills-block">
-      <div class="skills-label">Matemáticas & Estadística</div>
+      <div class="skills-label">Fundamentos Matemáticos</div>
       <div class="pills">
-        <span class="pill">Álgebra Lineal</span>
+        <span class="pill">Álgebra Lineal Aplicada</span>
         <span class="pill">Inferencia Estadística</span>
-        <span class="pill">Series de Tiempo</span>
-        <span class="pill">Econometría</span>
+        <span class="pill">Análisis de Series de Tiempo</span>
+        <span class="pill">Modelado Econométrico</span>
         <span class="pill">Ecuaciones Diferenciales</span>
       </div>
     </div>
 
-    <div style="margin-top:36px; margin-bottom:28px">
+    <div style="margin-top:40px; margin-bottom:30px">
       <div class="skills-label">Idiomas</div>
-      <div style="max-width:340px; margin-top:12px">
+      <div style="max-width:400px; margin-top:15px">
         <div class="lang-item">
           <div class="lang-row"><span>Español</span><span>Nativo</span></div>
           <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
         </div>
         <div class="lang-item">
-          <div class="lang-row"><span>Inglés</span><span>B1 — Intermedio</span></div>
+          <div class="lang-row"><span>Inglés</span><span>Nivel B1 (Intermedio)</span></div>
           <div class="bar"><div class="bar-fill" style="width:58%"></div></div>
         </div>
       </div>
     </div>
 
-    <div class="skills-label">Certificaciones</div>
-    <div style="margin-top:14px">
+    <div class="skills-label" style="margin-top: 40px;">Certificaciones Tecnológicas</div>
+    <div style="margin-top:15px">
       <div class="cert-item">
-        <div class="cert-badge">☁️</div>
+        <div class="cert-badge">AWS</div>
         <div class="cert-body">
-          <div class="cert-name">AWS · Machine Learning Essentials for Decision Makers</div>
-          <div class="cert-detail">Planning a ML Project · Amazon Web Services · Mayo 2026</div>
+          <div class="cert-name">Machine Learning Essentials for Decision Makers</div>
+          <div class="cert-detail">Planning a Machine Learning Project · Amazon Web Services · Mayo 2026</div>
         </div>
       </div>
       <div class="cert-item">
-        <div class="cert-badge">📊</div>
+        <div class="cert-badge">AWS</div>
         <div class="cert-body">
-          <div class="cert-name">AWS · Data & Analytics</div>
-          <div class="cert-detail">Serverless Analytics & Amazon Redshift · Mayo 2026</div>
+          <div class="cert-name">Data & Analytics Fundamentals</div>
+          <div class="cert-detail">Serverless Analytics & Amazon Redshift · Amazon Web Services · Mayo 2026</div>
         </div>
       </div>
       <div class="cert-item">
-        <div class="cert-badge">🗄️</div>
+        <div class="cert-badge">AWS</div>
         <div class="cert-body">
-          <div class="cert-name">AWS · Databases</div>
-          <div class="cert-detail">Migración de NoSQL a Amazon Aurora DSQL · Mayo 2026</div>
+          <div class="cert-name">Database Fundamentals</div>
+          <div class="cert-detail">Migración de Arquitecturas NoSQL a Amazon Aurora DSQL · Mayo 2026</div>
         </div>
       </div>
     </div>
@@ -779,7 +811,7 @@
     Jesús Alberto Cerón Hernández &nbsp;·&nbsp;
     <a href="mailto:jesusceron818@gmail.com">jesusceron818@gmail.com</a> &nbsp;·&nbsp;
     <a href="https://github.com/Alberto-Ceron" target="_blank">github.com/Alberto-Ceron</a> &nbsp;·&nbsp;
-    Ciudad de México
+    Ciudad de México, México
   </footer>
 
 </div>
