@@ -2,54 +2,143 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Portafolio - Data Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús Alberto Cerón Hernández | Portafolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 10%;
-            background-color: #f4f4f9;
+        /* Variables de colores para el tema claro y oscuro */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --card-bg: #ffffff;
+            --accent-color: #0366d6;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+            --accent-color: #58a6ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        /* Estilos de las tarjetas de proyectos */
+        .proyecto-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #003d82;
+
+        .tarjeta h3 {
+            margin-top: 0;
+            color: var(--accent-color);
         }
-        #resultado {
-            margin-top: 20px;
-            font-size: 18px;
+
+        /* Estilo del botón de modo oscuro */
+        #btnModoOscuro {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: var(--accent-color);
+            color: white;
+            cursor: pointer;
             font-weight: bold;
-            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <h1>Bienvenido a mi Portafolio</h1>
-    <p>Explorando datos espaciales con Machine Learning.</p>
-    
-    <button id="btnAnalisis">Clasificar Exoplaneta (Misión Kepler)</button>
+    <button id="btnModoOscuro">🌙 Modo Oscuro</button>
 
-    <p id="resultado"></p>
+    <div class="container">
+        <header>
+            <h1>Jesús Alberto Cerón Hernández</h1>
+            <h2>Físico | Data Science & Machine Learning</h2>
+            <p>Especializado en modelado predictivo, desarrollo de algoritmos avanzados (Random Forest, XGBoost) y análisis de datos complejos para resolver problemas desde la astrofísica hasta el riesgo financiero.</p>
+        </header>
+
+        <section>
+            <h2>Sobre Mí</h2>
+            <p>Estudiante de Física en la Facultad de Ciencias de la UNAM. Combino el rigor analítico de la ciencia con herramientas modernas de programación. Actualmente enfocado en la aplicación de Machine Learning, desarrollo de librerías en Python y econometría.</p>
+        </section>
+
+        <section>
+            <h2>Proyectos Destacados</h2>
+            <div class="proyecto-grid">
+                
+                <div class="tarjeta">
+                    <h3>RiskEnsemble</h3>
+                    <p>Librería personalizada en Python para la evaluación de riesgo financiero. Desarrollada integrando modelos predictivos avanzados para optimizar la toma de decisiones basada en datos.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Clasificación de Exoplanetas</h3>
+                    <p>Aplicación de técnicas de Machine Learning (árboles de decisión y bosques aleatorios) para identificar y clasificar exoplanetas utilizando bases de datos de la misión Kepler de la NASA. Proyecto presentado en el Congreso Nacional de Física.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Datathon Minsait</h3>
+                    <p>Primer lugar en la categoría de Data Science y segundo lugar general en competencia de desarrollo de soluciones analíticas bajo presión.</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <script>
-        // 1. Seleccionamos los elementos del HTML
-        const boton = document.getElementById('btnAnalisis');
-        const textoResultado = document.getElementById('resultado');
+        const botonOscuro = document.getElementById('btnModoOscuro');
+        const cuerpo = document.body;
 
-        // 2. Le decimos al botón qué hacer cuando le hagan "click"
-        boton.addEventListener('click', function() {
-            // Este bloque se ejecuta solo cuando presionas el botón
-            textoResultado.innerText = "Procesando datos con Random Forest... ¡Candidato a exoplaneta confirmado!";
-            textoResultado.style.color = "#28a745"; // Cambia el color a verde
+        botonOscuro.addEventListener('click', function() {
+            // "toggle" agrega la clase si no está, y la quita si ya está
+            cuerpo.classList.toggle('dark-mode');
+
+            // Cambiar el texto del botón dependiendo del modo
+            if (cuerpo.classList.contains('dark-mode')) {
+                botonOscuro.innerText = '☀️ Modo Claro';
+            } else {
+                botonOscuro.innerText = '🌙 Modo Oscuro';
+            }
         });
     </script>
 
